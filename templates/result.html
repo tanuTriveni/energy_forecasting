@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Prediction Results for {{ state }} from {{ start_date }} to {{ end_date }}</h1>
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Predicted Energy Consumption</h2>
+                <div>
+                    {{ result_table | safe }}
+                </div>
+               
+                
+                <h2>Predicted Energy Consumption Graph</h2>
+                <img src="data:image/png;base64,{{ fig_base64 }}" class="img-fluid" alt="Energy Consumption Graph">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
